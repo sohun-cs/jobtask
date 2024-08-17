@@ -1,0 +1,222 @@
+[
+    {
+        "_id": "1",
+        "Product Name": "Ultra HD Smart TV",
+        "Product Brand Name": "ElectroMax",
+        "Product Image": "https://example.com/product1.jpg",
+        "Description": "A 55-inch Ultra HD Smart TV with high dynamic range.",
+        "Price": 799.99,
+        "Category": "Electronics",
+        "Ratings": 4.7,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "2",
+        "Product Name": "Wireless Noise-Cancelling Headphones",
+        "Product Brand Name": "SoundWave",
+        "Product Image": "https://example.com/product2.jpg",
+        "Description": "High-quality wireless headphones with active noise cancellation.",
+        "Price": 299.99,
+        "Category": "Audio",
+        "Ratings": 4.8,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "3",
+        "Product Name": "Gaming Laptop",
+        "Product Brand Name": "TechGiant",
+        "Product Image": "https://example.com/product3.jpg",
+        "Description": "High-performance gaming laptop with 16GB RAM and NVIDIA graphics.",
+        "Price": 1499.99,
+        "Category": "Computers",
+        "Ratings": 4.9,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "4",
+        "Product Name": "4K Action Camera",
+        "Product Brand Name": "ElectroMax",
+        "Product Image": "https://example.com/product4.jpg",
+        "Description": "Durable 4K action camera with waterproof housing.",
+        "Price": 199.99,
+        "Category": "Cameras",
+        "Ratings": 4.5,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "5",
+        "Product Name": "Smartphone with Dual Cameras",
+        "Product Brand Name": "MobilityPlus",
+        "Product Image": "https://example.com/product5.jpg",
+        "Description": "Feature-packed smartphone with dual rear cameras and fast charging.",
+        "Price": 699.99,
+        "Category": "Mobile Phones",
+        "Ratings": 4.6,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "6",
+        "Product Name": "Bluetooth Portable Speaker",
+        "Product Brand Name": "SoundWave",
+        "Product Image": "https://example.com/product6.jpg",
+        "Description": "Compact and powerful Bluetooth speaker with deep bass.",
+        "Price": 129.99,
+        "Category": "Audio",
+        "Ratings": 4.4,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "7",
+        "Product Name": "Electric Kettle",
+        "Product Brand Name": "KitchenCraft",
+        "Product Image": "https://example.com/product7.jpg",
+        "Description": "Stainless steel electric kettle with auto shut-off.",
+        "Price": 49.99,
+        "Category": "Home Appliances",
+        "Ratings": 4.2,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "8",
+        "Product Name": "Wireless Gaming Mouse",
+        "Product Brand Name": "TechGiant",
+        "Product Image": "https://example.com/product8.jpg",
+        "Description": "Ergonomic wireless mouse with customizable buttons for gaming.",
+        "Price": 59.99,
+        "Category": "Computers",
+        "Ratings": 4.3,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "9",
+        "Product Name": "Smart Fitness Watch",
+        "Product Brand Name": "MobilityPlus",
+        "Product Image": "https://example.com/product9.jpg",
+        "Description": "Fitness tracker with heart rate monitor and GPS.",
+        "Price": 249.99,
+        "Category": "Wearables",
+        "Ratings": 4.5,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "10",
+        "Product Name": "Cordless Vacuum Cleaner",
+        "Product Brand Name": "KitchenCraft",
+        "Product Image": "https://example.com/product10.jpg",
+        "Description": "Lightweight and powerful cordless vacuum for easy cleaning.",
+        "Price": 199.99,
+        "Category": "Home Appliances",
+        "Ratings": 4.6,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "11",
+        "Product Name": "Laptop Cooling Pad",
+        "Product Brand Name": "TechGiant",
+        "Product Image": "https://example.com/product11.jpg",
+        "Description": "Cooling pad with adjustable fans to keep your laptop cool.",
+        "Price": 39.99,
+        "Category": "Computers",
+        "Ratings": 4.1,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "12",
+        "Product Name": "Noise-Cancelling Earbuds",
+        "Product Brand Name": "SoundWave",
+        "Product Image": "https://example.com/product12.jpg",
+        "Description": "Compact earbuds with active noise cancellation and long battery life.",
+        "Price": 149.99,
+        "Category": "Audio",
+        "Ratings": 4.7,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "13",
+        "Product Name": "Smart LED Light Bulbs",
+        "Product Brand Name": "ElectroMax",
+        "Product Image": "https://example.com/product13.jpg",
+        "Description": "Smart LED bulbs with voice control and customizable colors.",
+        "Price": 59.99,
+        "Category": "Home Automation",
+        "Ratings": 4.4,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "14",
+        "Product Name": "Air Fryer",
+        "Product Brand Name": "KitchenCraft",
+        "Product Image": "https://example.com/product14.jpg",
+        "Description": "Healthy cooking with this large capacity air fryer.",
+        "Price": 129.99,
+        "Category": "Home Appliances",
+        "Ratings": 4.5,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "15",
+        "Product Name": "Smartphone Gimbal",
+        "Product Brand Name": "MobilityPlus",
+        "Product Image": "https://example.com/product15.jpg",
+        "Description": "Stabilize your smartphone videos with this easy-to-use gimbal.",
+        "Price": 99.99,
+        "Category": "Mobile Accessories",
+        "Ratings": 4.3,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "16",
+        "Product Name": "Wireless Charging Pad",
+        "Product Brand Name": "TechGiant",
+        "Product Image": "https://example.com/product16.jpg",
+        "Description": "Fast wireless charging pad compatible with all Qi-enabled devices.",
+        "Price": 49.99,
+        "Category": "Mobile Accessories",
+        "Ratings": 4.4,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "17",
+        "Product Name": "Smart Doorbell Camera",
+        "Product Brand Name": "ElectroMax",
+        "Product Image": "https://example.com/product17.jpg",
+        "Description": "Smart doorbell with camera and two-way audio for home security.",
+        "Price": 179.99,
+        "Category": "Home Security",
+        "Ratings": 4.6,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "18",
+        "Product Name": "Portable Power Bank",
+        "Product Brand Name": "MobilityPlus",
+        "Product Image": "https://example.com/product18.jpg",
+        "Description": "High-capacity portable power bank with fast charging.",
+        "Price": 69.99,
+        "Category": "Mobile Accessories",
+        "Ratings": 4.5,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "19",
+        "Product Name": "Smart Thermostat",
+        "Product Brand Name": "ElectroMax",
+        "Product Image": "https://example.com/product19.jpg",
+        "Description": "Smart thermostat for efficient home heating and cooling.",
+        "Price": 199.99,
+        "Category": "Home Automation",
+        "Ratings": 4.7,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    },
+    {
+        "_id": "20",
+        "Product Name": "Electric Toothbrush",
+        "Product Brand Name": "KitchenCraft",
+        "Product Image": "https://example.com/product20.jpg",
+        "Description": "Rechargeable electric toothbrush with multiple brushing modes.",
+        "Price": 89.99,
+        "Category": "Personal Care",
+        "Ratings": 4.6,
+        "Product Creation date and time": "2024-07-22 23:45:00"
+    }
+]
