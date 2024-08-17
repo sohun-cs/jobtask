@@ -1,5 +1,19 @@
+import { useEffect, useState } from "react";
+import ProductCard from "../../components/ProductCard";
 
 const Home = () => {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('products.json')
+            .then(res => res.json())
+            .then(products => setProducts(products))
+
+    }, [])
+
+
+
     return (
         <div className="">
             <div>
@@ -30,6 +44,25 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* ---------------------------------------------------------------------------------- */}
+
+            <div className="px-20">
+
+                <div className="grid grid-cols-3 gap-16 justify-items-center">
+
+                    {
+                        products.map(product => <ProductCard
+                            key={product._id}
+                            product={product}>
+
+                        </ProductCard>)
+                    }
+
+                </div>
+
+            </div>
+
         </div>
     );
 };
