@@ -1,9 +1,8 @@
-import { Outlet } from "react-router-dom";
 
 const Home = () => {
     return (
         <div>
-            <h1>This is SCIC JobTask</h1>
+            <h1>This is Product SIte</h1>
         </div>
     );
 };
