@@ -4,7 +4,7 @@ const ProductCard = ({ product }) => {
     const { _id, product_name, product_brand_name, image, description, price, category, ratings, date } = product;
 
 
-    console.log("product", product);
+    // console.log("product", product);
 
     return (
         <div>

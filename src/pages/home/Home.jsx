@@ -1,16 +1,50 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../components/ProductCard";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
 
     const [products, setProducts] = useState([]);
+    const [itemsPerPage, setItemsPerPage] = useState(9);
+    const [currentPage, setCurrentPage] = useState(0);
+
+    const { count } = useLoaderData()
+
+    // console.log('myProducts', myProducts);
 
     useEffect(() => {
-        fetch('products.json')
+        fetch(`https://product-site-server.vercel.app/products?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(products => setProducts(products))
 
-    }, [])
+    }, [currentPage, itemsPerPage]);
+
+
+    // const count = products.length;
+
+    const numberOfPages = Math.ceil(count / itemsPerPage);
+
+    const pages = [...Array(numberOfPages).keys()];
+
+    const handleItemsPerPage = e => {
+        const val = parseInt(e.target.value);
+        setItemsPerPage(val);
+        setCurrentPage(0);
+    };
+
+
+    const handlePrevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+
+    const handleNextPage = () => {
+        if (currentPage < pages.length - 1) {
+            setCurrentPage(currentPage + 1);
+        }
+    }
 
 
 
@@ -47,7 +81,7 @@ const Home = () => {
 
             {/* ---------------------------------------------------------------------------------- */}
 
-            <div className="px-20">
+            <div className="px-20 py-24">
 
                 <div className="grid grid-cols-3 gap-16 justify-items-center">
 
@@ -60,6 +94,35 @@ const Home = () => {
                     }
 
                 </div>
+
+            </div>
+
+            <div className="space-x-3">
+
+                <button onClick={handlePrevPage}>Prev</button>
+
+                {
+                    pages.map(page => <button
+                        onClick={() => setCurrentPage(page)}
+                        key={page}
+                        className={`px-4 py-2 bg-slate-300 rounded-md 
+                        ${currentPage === page && 'bg-green-300'}`}>{page+1}</button>)
+                }
+
+                <button onClick={handleNextPage}>Next</button>
+
+
+                <select
+                    value={itemsPerPage}
+                    onChange={handleItemsPerPage}
+                    name="" id="">
+
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+
+                </select>
 
             </div>
 
