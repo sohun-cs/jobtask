@@ -18,18 +18,19 @@ const Navbar = () => {
 
     return (
         <nav>
-            <div className="flex justify-between items-center px-4 py-4 bg-slate-300">
-                <div>
-                    <h1 className="text-3xl font-bold"><Link to='/'>ProductSite</Link></h1>
+            <div className="flex justify-between items-center px-4 py-4 bg-blue-200">
+                <div className="flex items-center">
+                    <img className="w-16" src="https://i.ibb.co/mHScbsL/product.png" alt="" />
+                    <h1 className="text-xl lg:text-3xl font-bold text-indigo-700"><Link to='/'>ElectroHub</Link></h1>
                 </div>
                 <div>
-                    <ul className="flex gap-4 items-center">
+                    <ul className="flex gap-4 items-center text-indigo-700 font-semibold">
                         {
                             user ?
 
                                 <li>
                                     <Link onClick={navLogout}
-                                        className="text-lg"
+                                        className="lg:text-lg"
                                         to='/'>
                                         Logout
                                     </Link>

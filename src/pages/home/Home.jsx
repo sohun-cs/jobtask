@@ -3,7 +3,7 @@ import ProductCard from "../../components/ProductCard";
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-    
+
     const [products, setProducts] = useState([]);
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [currentPage, setCurrentPage] = useState(0);
@@ -16,7 +16,7 @@ const Home = () => {
     const { count } = useLoaderData();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://product-site-server.vercel.app/products?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(products => setProducts(products));
     }, [currentPage, itemsPerPage]);
@@ -89,12 +89,12 @@ const Home = () => {
     return (
         <div className="">
             <div>
-                <div className="py-6">
-                    <h1 className="text-4xl text-center">Your Product Site</h1>
+                <div className="py-16">
+                    <h1 className="text-2xl lg:text-4xl text-center font-bold text-indigo-700">Welcome to ElectroHub!</h1>
                 </div>
-                <div className="px-24 py-12">
-                    <div className="min-w-full flex justify-between gap-10">
-                        <div className="w-72">
+                <div className="lg:px-24 lg:py-12">
+                    <div className="min-w-full mx-auto flex flex-col lg:flex-row lg:justify-between gap-10">
+                        <div className="w-72 mx-auto">
                             <select
                                 className="select select-bordered w-full max-w-xs"
                                 onChange={handleBrandChange}
@@ -112,7 +112,7 @@ const Home = () => {
                                 <option value="LG">LG</option>
                             </select>
                         </div>
-                        <div className="w-72">
+                        <div className="w-72 mx-auto">
                             <select
                                 className="select select-bordered w-full max-w-xs"
                                 onChange={handleCategoryChange}
@@ -125,9 +125,9 @@ const Home = () => {
                                 <option value="Kitchen Appliances">Kitchen Appliances</option>
                             </select>
                         </div>
-                        <div className="w-72">
+                        <div className="w-72 mx-auto">
                             <select
-                                className="select select-bordered w-full max-w-xs"
+                                className="select select-bordered w-72 max-w-xs"
                                 onChange={handlePriceRangeChange}
                                 value={priceRange.join('-')}
                             >
@@ -141,7 +141,7 @@ const Home = () => {
                                 <option value="2001-5000">$2001 to $5000</option>
                             </select>
                         </div>
-                        <div className="w-72">
+                        <div className="w-72 mx-auto">
                             <select
                                 className="select select-bordered w-full max-w-xs"
                                 onChange={handleSortChange}
@@ -153,7 +153,7 @@ const Home = () => {
                                 <option value="dateNewestFirst">Date Added: Newest First</option>
                             </select>
                         </div>
-                        <div className="w-full">
+                        <div className=" lg:w-full px-10">
                             <input
                                 type="text"
                                 onChange={handleSearchProducts}
@@ -180,24 +180,24 @@ const Home = () => {
             </div>
 
             <div className="pb-20">
-                <div className="text-center space-x-3">
-                    <button onClick={handlePrevPage}>Prev</button>
+                <div className="text-center space-x-2 space-y-3 lg:space-y-0 lg:space-x-3">
+                    <button onClick={handlePrevPage} className="text-sm lg:text-base text-indigo-700">Prev</button>
                     {pages.map(page => (
                         <button
                             onClick={() => setCurrentPage(page)}
                             key={page}
-                            className={`px-4 py-2 rounded-md 
-                            ${currentPage === page ? 'bg-green-300' : 'bg-slate-300'}`}
+                            className={`px-3 py-1 lg:px-4 lg:py-2 text-sm lg:text-base rounded-md 
+                            ${currentPage === page ? 'bg-indigo-300' : 'bg-slate-300'}`}
                         >
                             {page + 1}
                         </button>
                     ))}
-                    <button onClick={handleNextPage}>Next</button>
+                    <button onClick={handleNextPage} className="text-sm lg:text-base text-indigo-700">Next</button>
                     <select
                         value={itemsPerPage}
                         onChange={handleItemsPerPage}
+                        className="text-sm lg:text-base text-indigo-700"
                     >
-                        <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="20">20</option>
                         <option value="50">50</option>

@@ -14,7 +14,7 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/productsCount')
+                loader: () => fetch('https://product-site-server.vercel.app/productsCount')
             },
             {
                 path: '/register',

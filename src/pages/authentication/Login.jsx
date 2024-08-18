@@ -98,7 +98,7 @@ const Login = () => {
                                         <div
                                             onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-7">
                                             {
-                                                showPassword ? <FaEye className="text-[#2ed9ff]"></FaEye> : <FaEyeSlash className="text-[#28d8ff]"></FaEyeSlash>
+                                                showPassword ? <FaEye className="text-indigo-700"></FaEye> : <FaEyeSlash className="text-indigo-700"></FaEyeSlash>
                                             }
                                         </div>
 
