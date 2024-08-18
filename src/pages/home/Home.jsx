@@ -10,6 +10,7 @@ const Home = () => {
     const [selectedBrand, setSelectedBrand] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
     const [priceRange, setPriceRange] = useState([0, Infinity]);
+    const [sortCriteria, setSortCriteria] = useState(''); // Added sort criteria state
 
     const { count } = useLoaderData();
 
@@ -27,6 +28,18 @@ const Home = () => {
         const matchesPriceRange = product.price >= priceRange[0] && product.price <= priceRange[1];
 
         return matchesSearchQuery && matchesBrand && matchesCategory && matchesPriceRange;
+    });
+
+    // Sort products based on sort criteria
+    const sortedProducts = [...filteredProducts].sort((a, b) => {
+        if (sortCriteria === 'priceLowToHigh') {
+            return a.price - b.price;
+        } else if (sortCriteria === 'priceHighToLow') {
+            return b.price - a.price;
+        } else if (sortCriteria === 'dateNewestFirst') {
+            return new Date(b.date) - new Date(a.date);
+        }
+        return 0; // Default no sorting
     });
 
     const numberOfPages = Math.ceil(count / itemsPerPage);
@@ -68,6 +81,10 @@ const Home = () => {
         setPriceRange([min, max]);
     };
 
+    const handleSortChange = e => {
+        setSortCriteria(e.target.value);
+    };
+
     return (
         <div className="">
             <div>
@@ -82,7 +99,6 @@ const Home = () => {
                                 onChange={handleBrandChange}
                                 value={selectedBrand}
                             >
-                                
                                 <option value="">Select Brand</option>
                                 <option value="Dell">Dell</option>
                                 <option value="Bose">Bose</option>
@@ -124,6 +140,18 @@ const Home = () => {
                                 <option value="2001-5000">$2001 to $5000</option>
                             </select>
                         </div>
+                        <div className="w-72">
+                            <select
+                                className="select select-bordered w-full max-w-xs"
+                                onChange={handleSortChange}
+                                value={sortCriteria}
+                            >
+                                <option value="">Sort By</option>
+                                <option value="priceLowToHigh">Price: Low to High</option>
+                                <option value="priceHighToLow">Price: High to Low</option>
+                                <option value="dateNewestFirst">Date Added: Newest First</option>
+                            </select>
+                        </div>
                         <div className="w-full">
                             <input
                                 type="text"
@@ -141,7 +169,7 @@ const Home = () => {
 
             <div className="px-20 py-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center">
-                    {filteredProducts.map(product => (
+                    {sortedProducts.map(product => (
                         <ProductCard
                             key={product._id}
                             product={product}

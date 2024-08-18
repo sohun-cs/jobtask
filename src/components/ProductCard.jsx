@@ -29,6 +29,10 @@ const ProductCard = ({ product }) => {
                         <div className="badge badge-outline bg-yellow-100">{ratings}</div>
                     </div>
 
+                    <div className="card-actions justify-end my-2">
+                        <div className=" text-blue-600">Date: {date}</div>
+                    </div>
+
 
                 </div>
             </div>
