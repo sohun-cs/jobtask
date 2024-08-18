@@ -3,6 +3,7 @@ import ProductCard from "../../components/ProductCard";
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+    
     const [products, setProducts] = useState([]);
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [currentPage, setCurrentPage] = useState(0);
