@@ -90,7 +90,7 @@
     {
         "_id": "9",
         "product_name": "Electric Kettle",
-        "product_brand_name": "Breville",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/WVjSXGn/kettle.jpg",
         "description": "Fast-boiling electric kettle with precise temperature control.",
         "price": 79.99,
@@ -123,7 +123,7 @@
     {
         "_id": "12",
         "product_name": "Cordless Vacuum Cleaner",
-        "product_brand_name": "Dyson",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/HxK01DW/cleaner.jpg",
         "description": "Powerful cordless vacuum cleaner with advanced filtration system.",
         "price": 499.99,
@@ -134,7 +134,7 @@
     {
         "_id": "13",
         "product_name": "Portable Speaker",
-        "product_brand_name": "Ultimate Ears",
+        "product_brand_name": "Sony",
         "image": "https://i.ibb.co/JzYmPKL/speaker.jpg",
         "description": "Rugged and waterproof portable speaker with high-quality sound.",
         "price": 89.99,
@@ -145,7 +145,7 @@
     {
         "_id": "14",
         "product_name": "Ultrabook Laptop",
-        "product_brand_name": "Asus",
+        "product_brand_name": "Dell",
         "image": "https://i.ibb.co/W6yVN0F/laptop.jpg",
         "description": "Slim and lightweight ultrabook laptop with high performance.",
         "price": 1299.99,
@@ -156,7 +156,7 @@
     {
         "_id": "15",
         "product_name": "Android Smartphone",
-        "product_brand_name": "OnePlus",
+        "product_brand_name": "Samsung",
         "image": "https://i.ibb.co/rMn2B1r/phone.jpg",
         "description": "Feature-rich Android smartphone with high-speed performance.",
         "price": 499.99,
@@ -167,7 +167,7 @@
     {
         "_id": "16",
         "product_name": "DSLR Camera",
-        "product_brand_name": "Nikon",
+        "product_brand_name": "Canon",
         "image": "https://i.ibb.co/pRkBFx4/camera.jpg",
         "description": "Professional DSLR camera with interchangeable lenses and high-resolution imaging.",
         "price": 1299.99,
@@ -178,7 +178,7 @@
     {
         "_id": "17",
         "product_name": "Fitness Watch",
-        "product_brand_name": "Garmin",
+        "product_brand_name": "Apple",
         "image": "https://i.ibb.co/1XyDg0N/watch.jpg",
         "description": "Advanced fitness watch with heart rate monitoring and GPS tracking.",
         "price": 299.99,
@@ -189,7 +189,7 @@
     {
         "_id": "18",
         "product_name": "Electric Kettle",
-        "product_brand_name": "Philips",
+        "product_brand_name": "JBL",
         "image": "https://i.ibb.co/WVjSXGn/kettle.jpg",
         "description": "Quick-boiling electric kettle with a sleek stainless steel design.",
         "price": 69.99,
@@ -222,7 +222,7 @@
     {
         "_id": "21",
         "product_name": "Handheld Vacuum Cleaner",
-        "product_brand_name": "Black+Decker",
+        "product_brand_name": "JBL",
         "image": "https://i.ibb.co/HxK01DW/cleaner.jpg",
         "description": "Compact handheld vacuum cleaner ideal for quick cleanups.",
         "price": 89.99,
@@ -233,7 +233,7 @@
     {
         "_id": "22",
         "product_name": "Wireless Bluetooth Speaker",
-        "product_brand_name": "Anker",
+        "product_brand_name": "Sony",
         "image": "https://i.ibb.co/JzYmPKL/speaker.jpg",
         "description": "Portable Bluetooth speaker with impressive sound and long battery life.",
         "price": 79.99,
@@ -244,7 +244,7 @@
     {
         "_id": "23",
         "product_name": "High-Performance Laptop",
-        "product_brand_name": "HP",
+        "product_brand_name": "Dell",
         "image": "https://i.ibb.co/W6yVN0F/laptop.jpg",
         "description": "High-performance laptop with a powerful processor and ample storage.",
         "price": 1199.99,
@@ -255,7 +255,7 @@
     {
         "_id": "24",
         "product_name": "Smartphone Pro",
-        "product_brand_name": "Xiaomi",
+        "product_brand_name": "Apple",
         "image": "https://i.ibb.co/rMn2B1r/phone.jpg",
         "description": "Latest smartphone with advanced features and a sleek design.",
         "price": 799.99,
@@ -277,7 +277,7 @@
     {
         "_id": "26",
         "product_name": "Smartwatch Series",
-        "product_brand_name": "Fitbit",
+        "product_brand_name": "Samsung",
         "image": "https://i.ibb.co/1XyDg0N/watch.jpg",
         "description": "Feature-packed smartwatch with fitness tracking and notifications.",
         "price": 349.99,
@@ -288,7 +288,7 @@
     {
         "_id": "27",
         "product_name": "Stainless Steel Kettle",
-        "product_brand_name": "Cuisinart",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/WVjSXGn/kettle.jpg",
         "description": "Durable stainless steel kettle with fast boiling capability.",
         "price": 89.99,
@@ -299,7 +299,7 @@
     {
         "_id": "28",
         "product_name": "Ultra HD TV",
-        "product_brand_name": "TCL",
+        "product_brand_name": "Sony",
         "image": "https://i.ibb.co/qRhG75F/tv.jpg",
         "description": "Ultra HD TV with vivid colors and smart functionality.",
         "price": 729.99,
@@ -310,7 +310,7 @@
     {
         "_id": "29",
         "product_name": "Active Noise-Cancelling Headphones",
-        "product_brand_name": "Sennheiser",
+        "product_brand_name": "Sony",
         "image": "https://i.ibb.co/H28qWvk/headphone.jpg",
         "description": "Premium active noise-cancelling headphones with exceptional audio quality.",
         "price": 349.99,
@@ -321,7 +321,7 @@
     {
         "_id": "30",
         "product_name": "Cyclone Vacuum Cleaner",
-        "product_brand_name": "Hoover",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/HxK01DW/cleaner.jpg",
         "description": "High-efficiency cyclone vacuum cleaner for powerful suction.",
         "price": 399.99,
@@ -343,7 +343,7 @@
     {
         "_id": "32",
         "product_name": "High-Speed Laptop",
-        "product_brand_name": "Acer",
+        "product_brand_name": "Dell",
         "image": "https://i.ibb.co/W6yVN0F/laptop.jpg",
         "description": "High-speed laptop with a fast processor and sleek design.",
         "price": 999.99,
@@ -354,7 +354,7 @@
     {
         "_id": "33",
         "product_name": "Latest Smartphone",
-        "product_brand_name": "Huawei",
+        "product_brand_name": "Samsung",
         "image": "https://i.ibb.co/rMn2B1r/phone.jpg",
         "description": "Newest smartphone model with innovative features and performance.",
         "price": 749.99,
@@ -365,7 +365,7 @@
     {
         "_id": "34",
         "product_name": "Compact Digital Camera",
-        "product_brand_name": "Panasonic",
+        "product_brand_name": "Canon",
         "image": "https://i.ibb.co/pRkBFx4/camera.jpg",
         "description": "Compact digital camera with high-resolution image capture and zoom.",
         "price": 399.99,
@@ -376,7 +376,7 @@
     {
         "_id": "35",
         "product_name": "GPS Smartwatch",
-        "product_brand_name": "Suunto",
+        "product_brand_name": "Apple",
         "image": "https://i.ibb.co/1XyDg0N/watch.jpg",
         "description": "Smartwatch with built-in GPS and fitness tracking features.",
         "price": 299.99,
@@ -387,7 +387,7 @@
     {
         "_id": "36",
         "product_name": "Electric Kettle with Temperature Control",
-        "product_brand_name": "Oster",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/WVjSXGn/kettle.jpg",
         "description": "Electric kettle with multiple temperature settings for precise brewing.",
         "price": 89.99,
@@ -398,7 +398,7 @@
     {
         "_id": "37",
         "product_name": "Ultra Slim TV",
-        "product_brand_name": "Philips",
+        "product_brand_name": "JBL",
         "image": "https://i.ibb.co/qRhG75F/tv.jpg",
         "description": "Ultra-slim TV with excellent picture quality and smart capabilities.",
         "price": 899.99,
@@ -574,7 +574,7 @@
     {
         "_id": "53",
         "product_name": "Fitness Smartwatch",
-        "product_brand_name": "Garmin",
+        "product_brand_name": "Apple",
         "image": "https://i.ibb.co/1XyDg0N/watch.jpg",
         "description": "Smartwatch designed for fitness tracking with advanced metrics.",
         "price": 249.99,
@@ -585,7 +585,7 @@
     {
         "_id": "54",
         "product_name": "Programmable Kettle",
-        "product_brand_name": "Breville",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/WVjSXGn/kettle.jpg",
         "description": "Programmable electric kettle with multiple temperature settings.",
         "price": 99.99,
@@ -618,7 +618,7 @@
     {
         "_id": "57",
         "product_name": "Handheld Vacuum Cleaner",
-        "product_brand_name": "Dyson",
+        "product_brand_name": "LG",
         "image": "https://i.ibb.co/HxK01DW/cleaner.jpg",
         "description": "Handheld vacuum cleaner with strong suction and compact design.",
         "price": 299.99,
@@ -629,7 +629,7 @@
     {
         "_id": "58",
         "product_name": "Wireless Portable Speaker",
-        "product_brand_name": "Ultimate Ears",
+        "product_brand_name": "Sony",
         "image": "https://i.ibb.co/JzYmPKL/speaker.jpg",
         "description": "Durable and waterproof wireless speaker with 360-degree sound.",
         "price": 179.99,
@@ -651,7 +651,7 @@
     {
         "_id": "60",
         "product_name": "5G Smartphone",
-        "product_brand_name": "OnePlus",
+        "product_brand_name": "Samsung",
         "image": "https://i.ibb.co/rMn2B1r/phone.jpg",
         "description": "5G-compatible smartphone with high-speed performance and advanced features.",
         "price": 849.99,
@@ -662,7 +662,7 @@
     {
         "_id": "61",
         "product_name": "High-Definition Camera",
-        "product_brand_name": "Nikon",
+        "product_brand_name": "Canon",
         "image": "https://i.ibb.co/pRkBFx4/camera.jpg",
         "description": "High-definition camera with exceptional image quality and advanced features.",
         "price": 1099.99,
@@ -684,7 +684,7 @@
     {
         "_id": "63",
         "product_name": "Smart 4K TV",
-        "product_brand_name": "Philips",
+        "product_brand_name": "JBL",
         "image": "https://i.ibb.co/qRhG75F/tv.jpg",
         "description": "Smart 4K TV with built-in streaming services and HDR support.",
         "price": 899.99,
@@ -717,7 +717,7 @@
     {
         "_id": "66",
         "product_name": "Portable Bluetooth Speaker",
-        "product_brand_name": "Anker",
+        "product_brand_name": "Sony",
         "image": "https://i.ibb.co/JzYmPKL/speaker.jpg",
         "description": "Compact and portable Bluetooth speaker with robust sound and long battery life.",
         "price": 69.99,
@@ -728,7 +728,7 @@
     {
         "_id": "67",
         "product_name": "Ultra-Thin Laptop",
-        "product_brand_name": "Asus",
+        "product_brand_name": "Dell",
         "image": "https://i.ibb.co/W6yVN0F/laptop.jpg",
         "description": "Ultra-thin and lightweight laptop with high performance for everyday tasks.",
         "price": 899.99,
@@ -739,7 +739,7 @@
     {
         "_id": "68",
         "product_name": "Smartphone with Dual Camera",
-        "product_brand_name": "Xiaomi",
+        "product_brand_name": "Apple",
         "image": "https://i.ibb.co/rMn2B1r/phone.jpg",
         "description": "Smartphone with dual camera system and fast charging capabilities.",
         "price": 549.99,
@@ -761,7 +761,7 @@
     {
         "_id": "70",
         "product_name": "Smart Kitchen Kettle",
-        "product_brand_name": "Philips",
+        "product_brand_name": "JBL",
         "image": "https://i.ibb.co/WVjSXGn/kettle.jpg",
         "description": "Smart kitchen kettle with programmable settings and quick boil function.",
         "price": 129.99,

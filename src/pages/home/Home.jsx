@@ -3,28 +3,31 @@ import ProductCard from "../../components/ProductCard";
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-
     const [products, setProducts] = useState([]);
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [currentPage, setCurrentPage] = useState(0);
     const [searchQuery, setSearchQuery] = useState('');
+    const [selectedBrand, setSelectedBrand] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [priceRange, setPriceRange] = useState([0, Infinity]);
 
-    const { count } = useLoaderData()
-
-    // console.log('myProducts', myProducts);
+    const { count } = useLoaderData();
 
     useEffect(() => {
         fetch(`http://localhost:5000/products?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
-            .then(products => setProducts(products))
-
+            .then(products => setProducts(products));
     }, [currentPage, itemsPerPage]);
 
+    // Filter products based on search, brand, category, and price range
+    const filteredProducts = products.filter(product => {
+        const matchesSearchQuery = product.product_name.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesBrand = selectedBrand ? product.product_brand_name === selectedBrand : true;
+        const matchesCategory = selectedCategory ? product.category === selectedCategory : true;
+        const matchesPriceRange = product.price >= priceRange[0] && product.price <= priceRange[1];
 
-    console.log("products", products);
-    // const count = products.length;
-
-    const searchedProducts = products.filter(product => product.product_name.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchesSearchQuery && matchesBrand && matchesCategory && matchesPriceRange;
+    });
 
     const numberOfPages = Math.ceil(count / itemsPerPage);
 
@@ -36,42 +39,89 @@ const Home = () => {
         setCurrentPage(0);
     };
 
-
     const handlePrevPage = () => {
         if (currentPage > 0) {
             setCurrentPage(currentPage - 1);
         }
     };
 
-
     const handleNextPage = () => {
         if (currentPage < pages.length - 1) {
             setCurrentPage(currentPage + 1);
         }
-    }
+    };
 
     const handleSearchProducts = e => {
         setSearchQuery(e.target.value);
     };
 
+    const handleBrandChange = e => {
+        setSelectedBrand(e.target.value);
+    };
 
+    const handleCategoryChange = e => {
+        setSelectedCategory(e.target.value);
+    };
 
-
+    const handlePriceRangeChange = e => {
+        const [min, max] = e.target.value.split('-').map(Number);
+        setPriceRange([min, max]);
+    };
 
     return (
         <div className="">
             <div>
                 <div className="py-6">
-                    <h1 className="text-4xl text-center ">Your Product Site</h1>
+                    <h1 className="text-4xl text-center">Your Product Site</h1>
                 </div>
                 <div className="px-24 py-12">
                     <div className="min-w-full flex justify-between gap-10">
-
                         <div className="w-72">
-                            <select className="select select-bordered w-full max-w-xs">
-                                <option disabled selected>Select Categorization</option>
-                                <option>Han Solo</option>
-                                <option>Greedo</option>
+                            <select
+                                className="select select-bordered w-full max-w-xs"
+                                onChange={handleBrandChange}
+                                value={selectedBrand}
+                            >
+                                
+                                <option value="">Select Brand</option>
+                                <option value="Dell">Dell</option>
+                                <option value="Bose">Bose</option>
+                                <option value="JBL">JBL</option>
+                                <option value="Sony">Sony</option>
+                                <option value="iRobot">iRobot</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Canon">Canon</option>
+                                <option value="Apple">Apple</option>
+                                <option value="LG">LG</option>
+                            </select>
+                        </div>
+                        <div className="w-72">
+                            <select
+                                className="select select-bordered w-full max-w-xs"
+                                onChange={handleCategoryChange}
+                                value={selectedCategory}
+                            >
+                                <option value="">Select Category</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Home Appliances">Home Appliances</option>
+                                <option value="Computers">Computers</option>
+                                <option value="Kitchen Appliances">Kitchen Appliances</option>
+                            </select>
+                        </div>
+                        <div className="w-72">
+                            <select
+                                className="select select-bordered w-full max-w-xs"
+                                onChange={handlePriceRangeChange}
+                                value={priceRange.join('-')}
+                            >
+                                <option value="0-Infinity">All Prices</option>
+                                <option value="0-50">Up to $50</option>
+                                <option value="51-100">$51 to $100</option>
+                                <option value="101-200">$101 to $200</option>
+                                <option value="201-500">$201 to $500</option>
+                                <option value="501-1000">$501 to $1000</option>
+                                <option value="1001-2000">$1001 to $2000</option>
+                                <option value="2001-5000">$2001 to $5000</option>
                             </select>
                         </div>
                         <div className="w-full">
@@ -80,16 +130,9 @@ const Home = () => {
                                 onChange={handleSearchProducts}
                                 value={searchQuery}
                                 placeholder="Search Product"
-                                className="input input-bordered w-full " />
+                                className="input input-bordered w-full"
+                            />
                         </div>
-                        <div className="w-72">
-                            <select className="select select-bordered w-full max-w-xs">
-                                <option disabled selected>Select Sorting</option>
-                                <option>Han Solo</option>
-                                <option>Greedo</option>
-                            </select>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -97,65 +140,43 @@ const Home = () => {
             {/* ---------------------------------------------------------------------------------- */}
 
             <div className="px-20 py-24">
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center">
-
-                    {
-                        searchedProducts.map(product => <ProductCard
+                    {filteredProducts.map(product => (
+                        <ProductCard
                             key={product._id}
-                            product={product}>
-
-                        </ProductCard>)
-                    }
-
+                            product={product}
+                        />
+                    ))}
                 </div>
-
             </div>
 
             <div className="pb-20">
-
                 <div className="text-center space-x-3">
-
                     <button onClick={handlePrevPage}>Prev</button>
-
-                    {
-                        pages.map(page => <button
+                    {pages.map(page => (
+                        <button
                             onClick={() => setCurrentPage(page)}
                             key={page}
-                            className={`px-4 py-2  rounded-md 
+                            className={`px-4 py-2 rounded-md 
                             ${currentPage === page ? 'bg-green-300' : 'bg-slate-300'}`}
-                        >{page + 1}</button>)
-
-                        
-
-                    }
-
-                    
-
+                        >
+                            {page + 1}
+                        </button>
+                    ))}
                     <button onClick={handleNextPage}>Next</button>
-
-
                     <select
                         value={itemsPerPage}
                         onChange={handleItemsPerPage}
-                        name="" id="">
-
+                    >
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="20">20</option>
                         <option value="50">50</option>
-
                     </select>
-
                 </div>
-
             </div>
-
-
         </div>
     );
 };
 
 export default Home;
-
-
